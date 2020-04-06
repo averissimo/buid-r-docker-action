@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh -l
 
 #Rscript -e "rmarkdown::clean_site('/data/vignettes')"
 #sleep 3

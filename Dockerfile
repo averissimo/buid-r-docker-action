@@ -1,5 +1,5 @@
-#FROM rocker/tidyverse:latest
-FROM alpine:3.10
+FROM rocker/tidyverse:latest
+#FROM alpine:3.10
 
 #RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 #  libudunits2-dev \

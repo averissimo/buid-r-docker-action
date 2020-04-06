@@ -1,5 +1,3 @@
-action.yml
-
 # action.yml
 name: 'Render Rmd site'
 description: 'Render Rmd site under data and vignettes'

@@ -2,7 +2,7 @@ action.yml
 
 # action.yml
 name: 'Render Rmd site'
-description: 'Render Rmd site under /data/vignettes'
+description: 'Render Rmd site under data and vignettes'
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'

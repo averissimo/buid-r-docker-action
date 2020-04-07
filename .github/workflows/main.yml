@@ -10,7 +10,9 @@ jobs:
     steps:
     - name: Checkout current repo
       uses: actions/checkout@v2
-    - run: build_docker.sh
+      with:
+        path: 'repo'
+    - run: ./repo/build_docker.sh
     - name: Dockerize
       if: success()
       uses: manusa/actions-publish-docker@320f1d1e

@@ -19,3 +19,6 @@ jobs:
         docker build --pull . -f Dockerfile.build -t betashil/rmd-render-site
         docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{ secrets.DOCKER_HUB_PASSWORD }}
         docker push betashil/rmd-render-site
+    - name: Push
+      run: |
+        ls

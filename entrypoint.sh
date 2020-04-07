@@ -1,4 +1,5 @@
-#!/bin/sh -l
+#!/bin/bash
 
-Rscript -e "rmarkdown::render_site('$GITHUB_WORKSPACE/repo/vignettes', output_format = rmarkdown::html_document())"
+cd $GITHUB_WORKSPACE/repo/vignettes
 
+Rscript /entrypoint.R

@@ -1,7 +1,0 @@
-version: '3'
-
-services:
-  build_r:
-    build: .
-    volumes:
-    - ./data:/data

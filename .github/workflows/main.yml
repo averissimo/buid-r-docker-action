@@ -6,21 +6,16 @@ on:
 jobs: 
   build_docker:
     runs-on: ubuntu-latest
-    name: Build and publish docker image
+    name: Build/Push Docker
     steps:
     - name: Checkout current repo
       uses: actions/checkout@v2
       with:
         path: repo
-    - name:
+    - name: Build/Push
       run: |
         ls
         cd repo
-        /bin/bash build_docker.sh
-    - name: Dockerize
-      if: success()
-      run: |
-        ls
-        docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{ secrets.DOCKER_HUB_PASSWORD }}
         docker build --pull . -f Dockerfile.build -t betashil/rmd-render-site
+        docker login --username ${{ secrets.DOCKER_HUB_USER }} --password ${{ secrets.DOCKER_HUB_PASSWORD }}
         docker push betashil/rmd-render-site

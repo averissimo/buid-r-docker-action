@@ -10,9 +10,12 @@ jobs:
     steps:
     - name: Checkout current repo
       uses: actions/checkout@v2
-    - run: |
+      with:
+        path: repo
+    - name:
+      run: |
       ls
-      cd ${{ github.repository }}
+      cd repo
       /bin/bash build_docker.sh
     - name: Dockerize
       if: success()

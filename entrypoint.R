@@ -5,11 +5,11 @@ if (file.exists('_README.Rmd')) {
   rmarkdown::render('_README.Rmd', output_format = 'github_document', output_file = 'README.md')
   
   # Remove intermediate html file
-  if (file.exists(file.path('README.html')) { unlink('README.html') }
+  if (file.exists(file.path('README.html'))) { unlink('README.html') }
 
   # Remove previous README and files
-  if (file.exists(file.path('..', 'README.md')) { unlink('../README.md') }
-  if (dir.exists(file.path('..', 'README_files')) { unlink('../README.md', recursive = TRUE, force = TRUE) }
+  if (file.exists(file.path('..', 'README.md'))) { unlink('../README.md') }
+  if (dir.exists(file.path('..', 'README_files'))) { unlink('../README.md', recursive = TRUE, force = TRUE) }
 
   # Move new README to root
   file.rename('README.md', '../README.md')

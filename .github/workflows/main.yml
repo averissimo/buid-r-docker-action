@@ -21,6 +21,6 @@ jobs:
       if: success()
       uses: manusa/actions-publish-docker@320f1d1e
       with:
-        name: betashil/rmd-render-sit
+        name: betashil/rmd-render-site
         username: ${{ secrets.DOCKER_HUB_USER }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}

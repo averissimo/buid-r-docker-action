@@ -15,7 +15,7 @@ if (file.exists('_README.Rmd')) {
 
   # Move new README to root
   if (file.exists('README.md')) { file.rename('README.md', '../README.md') }
-  if (dir.exists('README_files')) { file.rename('README_files', '../README_files')
+  if (dir.exists('README_files')) { file.rename('README_files', '../README_files') }
 }
 
 

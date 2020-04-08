@@ -14,8 +14,8 @@ if (file.exists('_README.Rmd')) {
   if (dir.exists(file.path('..', 'README_files'))) { unlink('../README_files', recursive = TRUE, force = TRUE) }
 
   # Move new README to root
-  if (file.exists('README.md') { file.rename('README.md', '../README.md') }
-  if (dir.exists('README_files') { file.rename('README_files', '../README_files')
+  if (file.exists('README.md')) { file.rename('README.md', '../README.md') }
+  if (dir.exists('README_files')) { file.rename('README_files', '../README_files')
 }
 
 

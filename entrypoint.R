@@ -19,7 +19,7 @@ if (file.exists('_README.Rmd')) {
 }
 
 
-if (file.exists('_site.yml') && file.exists('index.Rmd') && Sys.getenv('RENDER_SITE')) {
+if (file.exists('_site.yml') && file.exists('index.Rmd') && Sys.getenv('RENDER_SITE') == "1") {
   # Render site
   rmarkdown::render_site(output_format = 'html_document')
 }

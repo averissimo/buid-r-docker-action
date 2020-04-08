@@ -14,12 +14,12 @@ if (file.exists('_README.Rmd')) {
   if (dir.exists(file.path('..', 'README_files'))) { unlink('../README_files', recursive = TRUE, force = TRUE) }
 
   # Move new README to root
-  file.rename('README.md', '../README.md')
-  file.rename('README_files', '../README_files')
+  if (file.exists('README.md') { file.rename('README.md', '../README.md') }
+  if (dir.exists('README_files') { file.rename('README_files', '../README_files')
 }
 
 
-if (Sys.getenv('RENDER_SITE')) {
+if (file.exists('_site.yml') && file.exist('index.Rmd') && Sys.getenv('RENDER_SITE')) {
   # Render site
   rmarkdown::render_site(output_format = 'html_document')
 }

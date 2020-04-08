@@ -22,7 +22,7 @@ if (file.exists('_README.Rmd')) {
 futile.logger::flog.info('Variable: ', Sys.getenv('RENDER_SITE'))
 message('Variable: ', Sys.getenv('RENDER_SITE'))
 
-if (file.exists('_site.yml') && file.exists('index.Rmd') && Sys.getenv('RENDER_SITE') == "true") {
+if (file.exists('_site.yml') && file.exists('index.Rmd')) {
   # Render site
   rmarkdown::render_site(output_format = 'html_document')
 }

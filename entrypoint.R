@@ -1,4 +1,6 @@
 
+devtools::install('..', dependencies = TRUE)
+
 # README
 if (file.exists('_README.Rmd')) {
   # Render README
@@ -16,5 +18,8 @@ if (file.exists('_README.Rmd')) {
   file.rename('README_files', '../README_files')
 }
 
-# Render site
-rmarkdown::render_site(output_format = 'html_document')
+
+if (Sys.getenv('RENDER_SITE')) {
+  # Render site
+  rmarkdown::render_site(output_format = 'html_document')
+}

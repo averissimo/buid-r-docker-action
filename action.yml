@@ -1,6 +1,11 @@
 # action.yml
 name: 'Render Rmd site'
 description: 'Render Rmd site under data and vignettes'
+inputs:
+  render-site:
+    description: Should it render site?
+    required: true
+    default: true
 runs:
   using: 'docker'
   image: 'Dockerfile'

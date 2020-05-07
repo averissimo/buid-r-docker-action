@@ -1,6 +1,4 @@
 
-devtools::install('..', dependencies = TRUE)
-
 # README
 if (file.exists('_README.Rmd')) {
   # Render README

@@ -8,4 +8,6 @@ echo $1
 
 echo $RENDER_SITE
 
+Rscript -e "devtools::install('..', dependencies = TRUE)"
+
 Rscript /entrypoint.R

@@ -11,3 +11,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.render-site }}
+    - ${{ inputs.webhook }}

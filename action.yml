@@ -6,6 +6,10 @@ inputs:
     description: Should it render site?
     required: true
     default: true
+  webhook:
+    description: discord webhook to be used in R
+    required: true
+    default: ""
 runs:
   using: 'docker'
   image: 'Dockerfile'

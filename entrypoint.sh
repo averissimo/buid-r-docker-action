@@ -9,7 +9,7 @@ echo $1
 echo $2
 
 echo render-site: $RENDER_SITE
-echo webhook: $DISCORD_WEBHOOk
+echo webhook: $DISCORD_WEBHOOK
 
 echo DISCORD_WEBHOOK="$DISCORD_WEBHOOK" >> ~/.Renviron
 
